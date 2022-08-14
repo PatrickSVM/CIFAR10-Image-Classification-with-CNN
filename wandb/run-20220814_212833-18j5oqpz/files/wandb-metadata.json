@@ -1,0 +1,21 @@
+{
+    "os": "macOS-12.4-arm64-arm-64bit",
+    "python": "3.9.12",
+    "heartbeatAt": "2022-08-14T19:28:45.208788",
+    "startedAt": "2022-08-14T19:28:33.107215",
+    "docker": null,
+    "cpu_count": 8,
+    "cuda": null,
+    "args": null,
+    "state": "running",
+    "program": "CIFAR10-Classification.ipynb",
+    "root": "/Users/patrickhiemsch/Documents/Python_projects/CIFAR10-Classification",
+    "git": {
+        "remote": "https://github.com/PatrickSVM/CIFAR10-Classification.git",
+        "commit": "0e11fc9bdab32da809ff8f3645a0d19e25eaf83a"
+    },
+    "email": "patrick.hiemsch@gmail.com",
+    "host": "MacBook-Pro-von-Patrick.local",
+    "username": "patrickhiemsch",
+    "executable": "/Users/patrickhiemsch/miniforge3/envs/TF_M1/bin/python"
+}
