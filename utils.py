@@ -1,4 +1,6 @@
-
+import matplotlib.pyplot as plt
+import numpy as np
+from sklearn.metrics import confusion_matrix
 
 def PlotModelEval(Model, History, X, Y, Labels):
     
@@ -6,6 +8,7 @@ def PlotModelEval(Model, History, X, Y, Labels):
     S = Model.predict(X)
     # Prediction (class number) for each test image
     P = np.expand_dims(np.argmax(S,axis=1), axis=-1)
+    Y = np.argmax(Y, axis=1)
     # Calculate confusion matrix
     CM = confusion_matrix(Y,P)
     
@@ -75,3 +78,20 @@ def PlotConfusionMatrix(cm, classes,
     plt.title(title)
 
 # ============================================================================
+
+
+def PlotRandomFromEachClass(X,Y,N,labels):    
+    C = np.unique(Y)
+    M = len(C)
+    plt.figure(figsize=(16, N*1.5))
+    for i in range(M):
+        mask = np.squeeze(Y == C[i])
+        indexes = np.random.choice(X.shape[0], N, replace=False, p=mask/sum(mask))
+        for j in range(N):
+            plt.subplot(N,M,j*M+i+1)
+            plt.imshow(X[indexes[j]], aspect="equal")
+            plt.axis("off")
+            if j == 0:
+                plt.title(labels[i])
+                
+                
