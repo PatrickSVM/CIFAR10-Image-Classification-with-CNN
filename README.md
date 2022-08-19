@@ -1,4 +1,4 @@
-# CIFAR10 Image Classification with custom CNN
+# CIFAR-10 Image Classification with custom CNN
 
 This repository shows the process of building and training a CNN model for image-classification using tensorflow and keras, taking the well known [CIFAR-10 dataset](https://www.cs.toronto.edu/~kriz/cifar.html) as an example. The model we are going to build will have a (comparably) simple architecture with (only) 420,842 parameters in total, but is still reaching an accuracy of over 89% on the test set.
 
