@@ -13,7 +13,7 @@ The CIFAR-10 dataset consists of 60000 32x32 RGB images (50000 training images a
 
 In the [notebook](CIFAR10-Classification.ipynb) we will train a model on an ImageGenerator with horizontal flip, slight height and width shift and rotation range of 17 degrees. In each layer we will use ELU-activation, Kernel-size of 3x3 and Same-padding and apply BatchNorm directly after each Convolution and before feeding the results to the Activation. The structure of the model will be as follows:
 
-**Block1**
+**Block 1**
 - two Conv2D-layers with 32 filters
 - MaxPooling2D with (2,2) and Stride=2 (so reduces feature map dimensions by 50%)
 - 20%-Dropout 
